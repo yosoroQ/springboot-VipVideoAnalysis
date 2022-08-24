@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#app{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.ibox{
+    display: flex;
+    width: 650px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    background: url("../images/bg.jpg") no-repeat center;
+    background-size: cover;
+}
+.input{
+    box-sizing: border-box;
+    width: 360px;
+    height: 40px;
+    margin: 0 10px;
+    padding: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    outline: none;
+}
+.button{
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 1s;
+}
+.button:hover{
+    background: linear-gradient(mediumseagreen,darkcyan);
+    color: white;
+}
+
+.codes{
+     margin: 10px;
+     text-align: center;
+}
+

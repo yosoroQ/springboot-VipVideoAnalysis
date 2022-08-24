@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/images/logo.png}" rel="icon" type="image/x-icon">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <title>视频</title>
+</head>
+<body>
+<div id="app">
+    <form action="/doPlay" onsubmit="return urlCheck()">
+        <div>
+            <h2 style="margin:20px auto;text-align: center;color: white">
+                <span th:text="${tip}"></span>
+                本站点使用第三方提供的解析接口(仅用于学习和交流)
+            </h2>
+        </div>
+        <div class="ibox">
+            <input class="input" name="url" type="search" placeholder="输入地址(腾讯视频/优酷/爱奇艺)视频地址">
+            <input id="ck" type="checkbox" name="isQR" value="true" onclick="changeText()"><label for="ck" style="color: white;padding: 10px">手机观看</label>
+            <input id="btn" class="button" type="submit" value="在线播放">
+        </div>
+        <div class="codes">
+        </div>
+    </form>
+</div>
+
+<script>
+    function urlCheck() {
+        var value = document.querySelector(".input").value;
+        if (value == null || value == "") {
+            alert("请输入地址")
+            return false;
+        }
+        if (!value.startsWith("http")) {
+            alert("请输入正确的http/https链接")
+            return false;
+        }
+        return true
+    }
+    function changeText(){
+        var ck = document.querySelector("#ck").checked;
+        if(ck){
+            document.querySelector("#btn").value="生成二维码";
+        }else{
+            document.querySelector("#btn").value="在线播放";
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

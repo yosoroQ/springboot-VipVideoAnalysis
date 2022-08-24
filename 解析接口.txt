@@ -1,0 +1,25 @@
+
+thymeleaf命名空间
+xmlns:th="http://www.thymeleaf.org"
+
+
+二维码生成依赖
+<dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.4.M1</version>
+</dependency>
+<dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.5.0</version>
+</dependency>
+
+
+
+3、解析接口
+https://jx.blbo.cc:4433/?url=
+
+
+4、测试链接
+https://v.qq.com/x/cover/mzc00200pczsvio.html
